@@ -1,5 +1,5 @@
 # Baggage_detection_FULL
-This application is a system for monitoring the contents of passengers' luggage at the airport.
+This application is a system for monitoring the contents of passengers luggage at the airport.
 
 A video or x-ray image of the passenger's luggage is fed into the app and the app automatically detects and displays prohibited items to the user. The user can then save all information received from the neural network into a database or local computer.
 
