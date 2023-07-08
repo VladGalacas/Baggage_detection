@@ -13,8 +13,6 @@ from utils.utils import center, Table
 from logger.logger_config import logger
 from utils.neural_network.neuralnet_moduls import RealTimeObjectDetection, VideoObjectDetection, ImageObjectDetection
 from utils.database.database_gui import DatabaseMenu
-import datetime
-from datetime import datetime
 import customtkinter as ctk
 
 
@@ -54,7 +52,7 @@ class RealTimeGUIDetect(RealTimeObjectDetection):
     def model_choice_frame(win):
         topframe = tk.Toplevel(win)
         topframe.config(bg='black')
-        topframe.iconbitmap("Default.ico")
+        topframe.iconbitmap("MAI.ico")
         topframe.resizable(width=False, height=False)
         topframe.title('Настройка нейронной сети')
         scroe_threshold, nms_threshold, confidence_threshold = tk.IntVar(value=60), tk.IntVar(value=55), \
@@ -109,7 +107,7 @@ class RealTimeGUIDetect(RealTimeObjectDetection):
         self.frame, self.meta = self.get_detected_frame(self.net, self.output_layers, self.frame)
 
         topframe = tk.Toplevel(self.win)
-        topframe.iconbitmap("Default.ico")
+        topframe.iconbitmap("MAI.ico")
         topframe.resizable(width=False, height=False)
         topframe.title('Скриншот')
         image_toplvl = ImageGUIDetect(topframe, self.menu)
@@ -318,6 +316,10 @@ class ImageGUIDetect(ImageObjectDetection):
         center(topframe)
 
     def _save_img(self, img):
+        if not os.path.isdir('saved_data'):
+            os.mkdir('saved_data')
+        if not os.path.isdir('saved_data/images'):
+            os.mkdir('saved_data/images')
         result = filedialog.asksaveasfilename(title="Сохранение изображения", filetypes=(
             ('JPEG', ('*.jpg', '*.jpeg', '*.jpe')), ('PNG', '*.png'), ('BMP', ('*.bmp', '*.jdib')),
             ('GIF', '*.gif')), initialdir=os.path.join(os.getcwd(), 'saved_data/images'),
@@ -405,6 +407,10 @@ class ImageGUIDetect(ImageObjectDetection):
 
     def _save_table_csv(self, dataframe, tk_img):
         table_df = self._make_full_df(dataframe, tk_img)
+        if not os.path.isdir('saved_data'):
+            os.mkdir('saved_data')
+        if not os.path.isdir('saved_data/tables'):
+            os.mkdir('saved_data/tables')
         result = filedialog.asksaveasfilename(title="Сохранение таблицы",
                                               filetypes=[('All tyes(*.*)', '*.*'), ("csv file(*.csv)", "*.csv")],
                                               initialdir=os.path.join(os.getcwd(), 'saved_data/tables'),
@@ -423,7 +429,7 @@ class ImageGUIDetect(ImageObjectDetection):
                 table_df = self._make_full_df(dataframe, tk_img)
 
                 topframe = ctk.CTkToplevel(self.win)
-                topframe.iconbitmap("Default.ico")
+                topframe.iconbitmap("MAI.ico")
                 topframe.resizable(width=False, height=False)
                 topframe.title('Выбор таблицы')
 

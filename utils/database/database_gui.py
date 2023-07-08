@@ -58,7 +58,7 @@ class DatabaseMenu:
     def _connect_or_create_database(self, type_db, type_event):
         topframe = tk.Toplevel(self.root)
         topframe.config(bg='black')
-        topframe.iconbitmap("Default.ico")
+        topframe.iconbitmap("MAI.ico")
         topframe.resizable(width=False, height=False)
         topframe.title('Данные базы данных')
         ctk.CTkLabel(topframe, text='Имя пользователя', anchor="w", width=17).grid(column=0, row=0)
@@ -144,7 +144,7 @@ class DatabaseMenu:
     def _create_table(self):
         topframe = tk.Toplevel(self.root)
         topframe.config(bg='black')
-        topframe.iconbitmap("Default.ico")
+        topframe.iconbitmap("MAI.ico")
         topframe.resizable(width=False, height=False)
         topframe.title('Создание таблицы')
 
@@ -189,7 +189,7 @@ class DatabaseMenu:
     def _view_table(self, name_table):
         topframe = tk.Toplevel(self.root)
         topframe.config(bg='black')
-        topframe.iconbitmap("Default.ico")
+        topframe.iconbitmap("MAI.ico")
         topframe.resizable(width=False, height=False)
         topframe.title(f'Таблица {name_table}')
 

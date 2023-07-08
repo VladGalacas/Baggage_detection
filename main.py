@@ -14,7 +14,7 @@ root.title('Детекция запрещенных объектов багаж�
 root.geometry('1250x1000')
 center(root)
 root.resizable(width=False, height=False)
-root.iconbitmap("Default.ico")
+root.iconbitmap("MAI.ico")
 
 mainmenu = tk.Menu(root)
 root.config(menu=mainmenu)
