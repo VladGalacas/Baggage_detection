@@ -1,9 +1,0 @@
-.idea
-__pycache__
-venv
-logger/__pycache__
-logger/logger.log
-test_dir
-utils/__pycache__
-utils/database/__pycache__
-utils/neural_network/__pycache__
