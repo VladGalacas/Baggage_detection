@@ -15,4 +15,6 @@ This application is capable of detecting items such as :
 To start the programme, you need to:
 1. Download neural network weights
 2. Enter the path to the weights in the `config.py` file into the variable `YOLOv7_PATH`
-3. Open a terminal from the downloaded folder and run the application by entering the command `python main.py`
+3. Open a terminal from the downloaded folder
+4. Download dependencies by typing `pip install -r .\requirements.txt` into the terminal
+5. Run the application by typing `python main.py` into the terminal
