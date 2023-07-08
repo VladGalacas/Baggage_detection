@@ -3,13 +3,13 @@ import time
 import numpy as np
 from logger.logger_config import logger
 from utils.utils import counter_decorator
-from config import YOLOv7_PATH, YOLOv7_TINY_PATH, SIZE, CLASS_LIST
+from config import YOLOv7_PATH, SIZE, CLASS_LIST
 
 
 class RealTimeObjectDetection:
 
     def __init__(self,
-                 model_path=YOLOv7_TINY_PATH,
+                 model_path=YOLOv7_PATH,
                  class_list=CLASS_LIST,
                  score_threshold=0.6,
                  nms_threshold=0.55,
@@ -274,7 +274,7 @@ class ImageObjectDetection(RealTimeObjectDetection):
 class VideoObjectDetection(RealTimeObjectDetection):
 
     def __init__(self,
-                 model_path=YOLOv7_TINY_PATH,
+                 model_path=YOLOv7_PATH,
                  class_list=CLASS_LIST,
                  score_threshold=0.6,
                  nms_threshold=0.55,

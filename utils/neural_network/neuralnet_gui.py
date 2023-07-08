@@ -8,7 +8,7 @@ import os
 import mimetypes
 from io import BytesIO
 from PIL import ImageTk, Image, UnidentifiedImageError
-from config import YOLOv7_PATH, YOLOv7_TINY_PATH, SIZE, CLASS_LIST
+from config import YOLOv7_PATH, SIZE, CLASS_LIST
 from utils.utils import center, Table
 from logger.logger_config import logger
 from utils.neural_network.neuralnet_moduls import RealTimeObjectDetection, VideoObjectDetection, ImageObjectDetection
